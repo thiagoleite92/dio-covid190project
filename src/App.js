@@ -1,10 +1,17 @@
+import React from 'react';
+import { StylesProvider } from '@material-ui/styles'
+import { CssBaseline } from '@material-ui/core';
+import GlobalStyles from './commons/styles/global-style';
+import Main from './containers/Main';
 
 
 function App() {
   return (
-    <div className="App">
-      Oi
-    </div>
+    <StylesProvider injectFirst>
+      <CssBaseline />
+      <GlobalStyles />
+      <Main />
+    </StylesProvider>
   );
 }
 
